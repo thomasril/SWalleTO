@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "495771872939",
+    "firebase_url": "https://swalleto-d3873.firebaseio.com",
+    "project_id": "swalleto-d3873",
+    "storage_bucket": "swalleto-d3873.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:495771872939:android:bc3e7eed77a76d45",
+        "android_client_info": {
+          "package_name": "bluejack162.edu.swalleto"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "495771872939-nv5126imrhr2vp3l6gi02d3j6505thap.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "bluejack162.edu.swalleto",
+            "certificate_hash": "1f1615272609edeee1bd48c1752b3d59c7646cd2"
+          }
+        },
+        {
+          "client_id": "495771872939-4q30ge8lncuvntcjl3ikj02sf33c4nfa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiQ4XSI7PoqlHmm7E9Dyl_xM2RcMINviU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "495771872939-4q30ge8lncuvntcjl3ikj02sf33c4nfa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

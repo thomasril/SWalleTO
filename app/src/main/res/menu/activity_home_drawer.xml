@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@mipmap/ic_dashboard"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/nav_record"
+            android:icon="@mipmap/ic_record"
+            android:title="Record" />
+        <item android:title="Chart">
+            <menu>
+                <item
+                    android:id="@+id/nav_income"
+                    android:icon="@mipmap/ic_income_chart"
+                    android:title="Income" />
+                <item
+                    android:id="@+id/nav_expense"
+                    android:icon="@mipmap/ic_expenses_chart"
+                    android:title="Expenses" />
+                <item
+                    android:id="@+id/nav_spendbyCategory"
+                    android:icon="@mipmap/ic_spendby_category"
+                    android:title="Spend by categories" />
+
+            </menu>
+        </item>
+        <item
+            android:id="@+id/nav_plannedPayment"
+            android:icon="@mipmap/ic_planned_payment"
+            android:title="Planned payment" />
+
+        <item
+            android:id="@+id/nav_report"
+            android:title="Reports">
+            <menu>
+                <item
+                    android:id="@+id/nav_generate"
+                    android:icon="@mipmap/ic_pdf"
+                    android:title="Generate to PDF" />
+            </menu>
+        </item>
+
+        <item android:title="Friend">
+            <menu>
+                <item
+                    android:id="@+id/nav_add"
+                    android:icon="@mipmap/ic_add_friend"
+                    android:title="Add Friend" />
+                <item
+                    android:id="@+id/nav_manageRelationship"
+                    android:icon="@mipmap/ic_manage_friends"
+                    android:title="Manage Relationship" />
+
+            </menu>
+        </item>
+
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@mipmap/ic_about"
+            android:title="About" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@mipmap/ic_logout"
+            android:title="Logout">
+
+        </item>
+
+    </group>
+
+</menu>
