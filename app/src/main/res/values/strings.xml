@@ -10,4 +10,22 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="categories_array">
+        <item>Food and Drinks</item>
+        <item>Shopping</item>
+        <item>Housing</item>
+        <item>Transportation</item>
+        <item>Vehicle</item>
+        <item>Life and Entertainment</item>
+        <item>Communication, PC</item>
+    </string-array>
+
+    <string-array name="payments_array">
+        <item>Cash</item>
+        <item>Credit Card</item>
+        <item>Housing</item>
+        <item>Bank Transfer</item>
+        <item>Vourcher</item>
+    </string-array>
 </resources>
