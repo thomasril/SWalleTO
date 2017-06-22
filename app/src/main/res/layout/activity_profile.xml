@@ -24,15 +24,14 @@
         android:id="@+id/txtName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="15dp"
         android:ems="10"
         android:hint="Your Name"
         android:inputType="textPersonName"
-        android:text="Name"
         tools:layout_editor_absoluteX="142dp"
-        tools:layout_editor_absoluteY="65dp"
-        android:layout_marginTop="15dp"
-        android:layout_below="@+id/textView2"
-        android:layout_alignParentEnd="true" />
+        tools:layout_editor_absoluteY="65dp" />
 
     <EditText
         android:id="@+id/txtNewPass"

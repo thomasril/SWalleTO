@@ -24,8 +24,10 @@
     <string-array name="payments_array">
         <item>Cash</item>
         <item>Credit Card</item>
-        <item>Housing</item>
         <item>Bank Transfer</item>
         <item>Vourcher</item>
     </string-array>
+
+    <string name="category_prompt">Choose your Category..</string>
+    <string name="payment_prompt">Choose your Payment Type..</string>
 </resources>

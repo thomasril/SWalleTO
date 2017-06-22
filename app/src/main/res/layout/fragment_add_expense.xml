@@ -1,193 +1,166 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="bluejack162.edu.swalleto.fragments.AddExpenseFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
     <TextView
         android:id="@+id/tvAmount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
-        android:text="0 IDR"
-        android:textSize="55dp"
+        android:text="Amount"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/btn9" />
+        android:layout_alignEnd="@+id/tvCategory"
+        android:layout_marginTop="13dp" />
 
-    <Button
-        android:id="@+id/btn7"
-        android:layout_width="80dp"
+    <TextView
+        android:id="@+id/tvPaymentType"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="7"
-        android:layout_marginStart="15dp"
-        android:layout_below="@+id/spinnerTypePayment"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="18dp" />
-
-    <Button
-        android:id="@+id/btn8"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/btn7"
-        android:layout_marginStart="10dp"
-        android:layout_toEndOf="@+id/btn7"
-        android:text="8" />
-
-    <Button
-        android:id="@+id/btn9"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/btn8"
-        android:layout_marginStart="10dp"
-        android:layout_toEndOf="@+id/btn8"
-        android:text="9" />
-
-    <Button
-        android:id="@+id/btn4"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:text="4"
-        android:layout_below="@+id/btn7"
-        android:layout_alignStart="@+id/btn7" />
-
-    <Button
-        android:id="@+id/btn5"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/btn8"
-        android:layout_alignTop="@+id/btn4"
-        android:text="5" />
-
-    <Button
-        android:id="@+id/btn6"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/btn9"
-        android:layout_alignTop="@+id/btn5"
-        android:text="6" />
-
-    <Button
-        android:id="@+id/btn1"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:text="1"
         android:layout_marginTop="11dp"
-        android:layout_below="@+id/btn4"
-        android:layout_alignStart="@+id/btn4" />
-
-    <Button
-        android:id="@+id/btn2"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:text="2"
-        android:layout_alignBaseline="@+id/btn1"
-        android:layout_alignBottom="@+id/btn1"
-        android:layout_alignStart="@+id/btn5" />
-
-    <Button
-        android:id="@+id/btn3"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/btn6"
-        android:layout_alignTop="@+id/btn2"
-        android:text="3" />
-
-    <Button
-        android:id="@+id/btn0"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:text="0"
-        android:layout_below="@+id/btn2"
-        android:layout_alignStart="@+id/btn2"
-        android:layout_marginTop="16dp" />
-
-    <Button
-        android:id="@+id/btnDelete"
-        android:layout_width="80dp"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/btn3"
-        android:layout_alignTop="@+id/btn0"
-        android:text="DEL" />
-
-    <Button
-        android:id="@+id/btnDivide"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:text="/"
-        android:layout_alignBaseline="@+id/btn9"
-        android:layout_alignBottom="@+id/btn9"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="15dp" />
-
-    <Button
-        android:id="@+id/btnMultiply"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/btnDivide"
-        android:layout_below="@+id/btn9"
-        android:text="*" />
-
-    <Button
-        android:id="@+id/btnMin"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/btnMultiply"
-        android:layout_below="@+id/btnMultiply"
-        android:text="-" />
-
-    <Button
-        android:id="@+id/btnPlus"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/btnMin"
-        android:layout_below="@+id/btnMin"
-        android:text="+" />
-
-    <Button
-        android:id="@+id/btnEquals"
-        android:layout_width="50dp"
-        android:layout_height="wrap_content"
-        android:text="="
-        android:layout_marginTop="12dp"
-        android:layout_below="@+id/btnPlus"
-        android:layout_alignStart="@+id/btnPlus" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="47dp"
-        android:text="Category"
-        android:layout_below="@+id/tvAmount"
-        android:layout_toStartOf="@+id/btnDivide" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="35dp"
         android:text="Payment Type"
-        android:layout_above="@+id/spinnerCategory"
-        android:layout_alignStart="@+id/btn7" />
+        android:layout_below="@+id/txtAmount"
+        android:layout_alignStart="@+id/txtAmount" />
+
+    <TextView
+        android:id="@+id/tvCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/spinnerType"
+        android:layout_below="@+id/spinnerType"
+        android:layout_marginTop="24dp"
+        android:text="Category" />
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Description"
+        android:layout_below="@+id/txtDate"
+        android:layout_alignStart="@+id/tvDate" />
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/spinnerCategory"
+        android:layout_below="@+id/spinnerCategory"
+        android:layout_marginTop="15dp"
+        android:text="Date" />
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="9dp"
+        android:src="@drawable/ic_amount"
+        android:id="@+id/imgAmount"
+        android:layout_below="@+id/tvAmount"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/ic_category"
+        android:id="@+id/imgCategory"
+        android:layout_above="@+id/tvDate"
+        android:layout_alignStart="@+id/imgPaymentType" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="5dp"
+        android:src="@mipmap/ic_payment_type"
+        android:id="@+id/imgPaymentType"
+        android:layout_above="@+id/tvCategory"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="7dp"
+        android:src="@drawable/ic_desc"
+        android:id="@+id/imgDesc"
+        android:layout_below="@+id/tvDesc"
+        android:layout_alignStart="@+id/imgCategory" />
+
+    <ImageView
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:src="@drawable/ic_calendar"
+        android:id="@+id/imgCalendar"
+        android:layout_below="@+id/tvDate"
+        android:layout_alignStart="@+id/imgDesc" />
+
+    <EditText
+        android:id="@+id/txtAmount"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        android:layout_marginStart="12dp"
+        android:layout_below="@+id/tvAmount"
+        android:layout_toEndOf="@+id/imgPaymentType" />
+
+    <EditText
+        android:id="@+id/txtDate"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvDesc"
+        android:layout_below="@+id/tvDate"
+        android:ems="10"
+        android:inputType="date" />
+
+    <EditText
+        android:id="@+id/txtTime"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtDate"
+        android:layout_alignBottom="@+id/txtDate"
+        android:layout_toEndOf="@+id/txtDate"
+        android:ems="10"
+        android:inputType="time" />
+
+    <EditText
+        android:id="@+id/txtDesc"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvDesc"
+        android:layout_below="@+id/tvDesc"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/btnAddExpenses"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="34dp"
+        android:text="Add Expenses" />
+
+    <Spinner
+        android:id="@+id/spinnerType"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvPaymentType"
+        android:layout_below="@+id/tvPaymentType"
+        android:layout_marginTop="12dp"
+        android:entries="@array/payments_array"
+        android:prompt="@string/payment_prompt" />
 
     <Spinner
         android:id="@+id/spinnerCategory"
-        android:layout_width="150dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView4"
-        android:layout_alignStart="@+id/btn9"
+        android:layout_marginTop="14dp"
         android:entries="@array/categories_array"
-        android:layout_marginTop="12dp" />
-
-    <Spinner
-        android:id="@+id/spinnerTypePayment"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/spinnerCategory"
-        android:entries="@array/payments_array"
-        android:layout_alignStart="@+id/btn7"
-        android:layout_marginStart="11dp" />
+        android:prompt="@string/category_prompt"
+        android:layout_below="@+id/tvCategory"
+        android:layout_alignStart="@+id/tvCategory" />
 
 </RelativeLayout>

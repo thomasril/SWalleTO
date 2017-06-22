@@ -10,7 +10,37 @@
         android:layout_height="wrap_content"
         android:text="Add Friend"
         android:textSize="40dp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="21dp"
+        android:id="@+id/textView4" />
+
+    <EditText
+        android:id="@+id/txtSearch"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:ems="10"
+        android:hint="Find your friend"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/textView4"
+        android:layout_alignEnd="@+id/textView4"
+        android:layout_marginEnd="13dp" />
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtSearch"
+        android:layout_alignParentEnd="true"
+        android:text="Search" />
+
+    <ExpandableListView
+        android:id="@+id/listSearchFriendView"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="11dp" />
 
 </RelativeLayout>

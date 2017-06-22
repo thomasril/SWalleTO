@@ -11,7 +11,15 @@
         android:layout_height="wrap_content"
         android:text="Spend By Category"
         android:textSize="40dp"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+
+    <ListView
+        android:id="@+id/listSpendByCategoryView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
 
 </RelativeLayout>

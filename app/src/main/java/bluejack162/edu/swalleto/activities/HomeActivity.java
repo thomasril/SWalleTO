@@ -48,33 +48,32 @@ public class HomeActivity extends AppCompatActivity
 //                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
 //                        .setAction("Action", null).show();
 
-                AlertDialog.Builder a_builder = new AlertDialog.Builder(HomeActivity.this);
+                Intent intent = new Intent(getApplicationContext(), MoneyActivity.class);
+                startActivity(intent);
+                finish();
+
+                // buat munculin alert
+
+                /*AlertDialog.Builder a_builder = new AlertDialog.Builder(HomeActivity.this);
 
                 a_builder.setMessage("What do you want?")
                         .setCancelable(false)
                         .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
-                                intent.putExtra("email",email);
-                                intent.putExtra("id",id);
 
-                                startActivity(intent);
                             }
                         })
                         .setNegativeButton("No", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialogInterface, int i) {
-                                //dialogInterface.cancel();
-                                Intent intent = new Intent(getApplicationContext(), MoneyActivity.class);
-                                startActivity(intent);
-                                finish();
+                                dialogInterface.cancel();
                             }
                         });
 
                 AlertDialog alert = a_builder.create();
                 alert.setTitle("Alert mz");
-                alert.show();
+                alert.show();*/
             }
         });
 
@@ -108,7 +107,6 @@ public class HomeActivity extends AppCompatActivity
         TextView txtUserLoginEmail = (TextView) headerView.findViewById(R.id.tvUserLoginEmail);
         ImageView profilePictureUserLogin = (ImageView) headerView.findViewById(R.id.profilePictureUserLogin);
 
-
         Intent i = getIntent();
         String userLoginName = i.getStringExtra("name").toString();
         id = i.getStringExtra("id").toString();
@@ -118,15 +116,23 @@ public class HomeActivity extends AppCompatActivity
         txtUserLoginName.setText(userLoginName);
         txtUserLoginEmail.setText(email);
 
+        headerView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), ProfileActivity.class);
+                intent.putExtra("email",email);
+                intent.putExtra("id",id);
+                startActivity(intent);
+
+            }
+
+        });
 //        try {
 //             bitmap = BitmapFactory.decodeStream(new URL(url).openConnection().getInputStream());
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
 //        profilePictureUserLogin.setImageBitmap(bitmap);
-
-
-
     }
 
     @Override

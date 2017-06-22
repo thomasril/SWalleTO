@@ -1,13 +1,181 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="bluejack162.edu.swalleto.fragments.PlannedPaymentFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:layout_marginStart="13dp"
+        android:layout_above="@+id/txtDate"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/tvReminder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Daily Reminder"
+        android:layout_above="@+id/txtDate"
+        android:layout_alignStart="@+id/spinner" />
+
+    <EditText
+        android:id="@+id/txtDate"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="13dp"
+        android:ems="10"
+        android:inputType="date"
+        android:layout_above="@+id/relativeLayout2"
+        android:layout_alignStart="@+id/tvDate" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:id="@+id/relativeLayout2"
+        android:layout_above="@+id/btnAddPlannedPayment"
+        android:layout_alignParentStart="true">
+
+
+        <TextView
+            android:id="@+id/tvAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="12dp"
+            android:layout_toEndOf="@+id/imgAmount"
+            android:text="Amount" />
+
+        <TextView
+            android:id="@+id/tvPaymentType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/txtAmount"
+            android:layout_below="@+id/txtAmount"
+            android:layout_marginTop="15dp"
+            android:text="Payment Type" />
+
+        <TextView
+            android:id="@+id/tvCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignStart="@+id/spinnerType"
+            android:layout_below="@+id/spinnerType"
+            android:layout_marginTop="18dp"
+            android:text="Category" />
+
+        <TextView
+            android:id="@+id/tvDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/spinnerCategory"
+            android:layout_below="@+id/spinnerCategory"
+            android:layout_marginTop="22dp"
+            android:text="Description" />
+
+        <EditText
+            android:id="@+id/txtAmount"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/tvAmount"
+            android:layout_below="@+id/tvAmount"
+            android:ems="10"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/txtDesc"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:layout_below="@+id/tvDesc"
+            android:layout_alignStart="@+id/tvDesc" />
+
+        <ImageView
+            android:id="@+id/imgAmount"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="13dp"
+            android:src="@drawable/ic_amount"
+            android:layout_below="@+id/tvAmount"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:id="@+id/imgCategory"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/ic_category"
+            android:layout_below="@+id/tvCategory"
+            android:layout_alignStart="@+id/imgPaymentType" />
+
+        <ImageView
+            android:id="@+id/imgPaymentType"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/ic_payment_type"
+            android:layout_below="@+id/tvPaymentType"
+            android:layout_alignStart="@+id/imgAmount" />
+
+        <ImageView
+            android:id="@+id/imgDesc"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignEnd="@+id/imgCategory"
+            android:layout_alignStart="@+id/imgCategory"
+            android:layout_below="@+id/tvDesc"
+            android:src="@drawable/ic_desc" />
+
+        <Spinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imgCategory"
+            android:layout_alignStart="@+id/tvCategory"
+            android:entries="@array/categories_array"
+            android:prompt="@string/category_prompt" />
+
+        <Spinner
+            android:id="@+id/spinnerType"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imgPaymentType"
+            android:layout_alignStart="@+id/tvPaymentType"
+            android:entries="@array/payments_array"
+            android:prompt="@string/payment_prompt" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnAddPlannedPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add Planned Payment"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_alignBottom="@+id/txtDate"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:id="@+id/txtPlannedPaymentName"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:ems="10"
+        android:hint="Your planned payment"
+        android:inputType="textPersonName"
+        android:layout_above="@+id/tvDate"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
